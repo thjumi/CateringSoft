@@ -1,0 +1,179 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f0ea;
+}
+
+header {
+    background: linear-gradient(#000000c3, rgba(0, 0, 0, 0.445)), url(../imagenes/iniciosesion/inicios.jpg);
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-menu {
+    display: flex;
+}
+
+.lista-menu li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.lista-menu li a {
+    color: #ffffff;
+    padding: 14px 24px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.lista-menu li a:hover {
+    color: #18ff08;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contenedor {
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+#contenedor-titulo-flex {
+    display: flex;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.contenedor-titulo h1 {
+    color: #ffffff;
+    font-size: 80px;
+    margin: 0;
+}
+
+.contenedor-titulo h2 {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Tarjetas */
+#tarjetas {
+    padding: 40px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 20px; 
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para cada tarjeta */
+.card {
+    width: 100%;
+    height: 350px; 
+    perspective: 1000px;
+    margin-bottom: 20px; 
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+    
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 80%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-front {
+    margin-left: 20px;
+    padding: 40px;
+    background-color:  #a4938ac3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-back {
+    margin: 0;
+    padding: 30px;
+    background-color: #a4938ac3;
+    color: white;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h2, .card-back h3 {
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+.card p, .card-back p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #000000;
+}
+/* Sección Proyectos */
+#Proyectos {
+    margin: 60px 0;
+    padding: 20px;
+    height: auto;
+    align-items: center;
+}
+.contenedor h2{
+    color:#ff5e00a4;
+    font-size: 40px;
+}
+
+#Proyectos .contenedor-proyectos {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Carrusel */
+button .owl-prev,
+button .owl-next{
+    font-size: 30px !important;
+}
+
+
+
+

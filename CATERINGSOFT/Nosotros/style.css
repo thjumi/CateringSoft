@@ -1,0 +1,188 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f0ea;
+}
+
+header {
+    background: linear-gradient(#000000ad, rgba(0, 0, 0, 0.313)), url(../imagenes/nosotros/encabezado.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Menu */
+.menu .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-menu {
+    display: flex;
+}
+
+.lista-menu li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.lista-menu li a {
+    color: #ffffff;
+    padding: 14px 24px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.lista-menu li a:hover {
+    color: #ff6106;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* General Container */
+.contenedor {
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+#contenedor-titulo-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.contenedor-titulo h1 {
+    color: #ffffff;
+    font-size: 80px;
+    margin: 0;
+}
+
+.contenedor-titulo h2 {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Sección "Quienes Somos" */
+#Quienes-somos {
+    background-color: #f3ece5;
+    padding: 40px;
+    min-height: 75vh;
+}
+
+.contenedorH h1 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #ff5500;
+    margin-bottom: 20px;
+}
+
+.contenido-historia {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.texto-historia {
+    flex: 1;
+    font-size: 18px;
+    color: #333333;
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.contenedor-img {
+    max-width: 500px;
+    flex-shrink: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Sección ¿Por qué nosotros? */
+#porque-nosotros {
+    background-color: #dfd1c3;
+    padding: 40px;
+    margin: 60px 0;
+    border-radius: 10px;
+    border: 2px solid #ff6106;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#porque-nosotros:hover {
+    transform: scale(1.02);
+}
+
+#porque-nosotros h1 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #ff6106;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.texto-historia p {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Tarjetas */
+#tarjetas {
+    margin: 60px 0;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Reduce la separación entre tarjetas */
+}
+
+.card {
+    background-color: #f1ededc9;
+    border: 2px solid #333;
+    width: 250px; /* Reduce el ancho de la tarjeta */
+    padding: 10px; /* Añade un poco de padding para darle espacio interno */
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 18px; /* Reduce el tamaño del texto del título */
+    color: #333;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px; /* Reduce el tamaño del texto del párrafo */
+    color: #000000;
+    margin: 0 10px 10px;
+}

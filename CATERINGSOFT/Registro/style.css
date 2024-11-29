@@ -1,0 +1,151 @@
+/* General */
+body {
+    background: linear-gradient(#000000cf, rgba(0, 0, 0, 0.724)),  url(../imagenes/iniciosesion/inicios.jpg);
+    background-size: cover;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #064508;
+    color: white;
+    padding: 10px 20px;
+}
+
+.menu .contenedor {
+    max-width: 1280px;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lista-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.lista-menu li {
+    list-style: none;
+}
+
+.lista-menu li a {
+    color: #ffffff;
+    padding: 14px 24px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.lista-menu li a:hover {
+    color: #11ff00;
+}
+
+/* Contenedor Título */
+#contenedor-titulo-flex {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+}
+
+.contenedor-titulo h1 {
+    color: #ffffff;
+    font-size: 80px;
+    margin: 0;
+}
+
+.contenedor-titulo h2 {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Formulario */
+.formulario {
+    max-width: 400px;
+    width: 100%;
+    margin: 80px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.703);
+    text-align: center;
+}
+
+.formulario h1 {
+    font-size: 22px;
+    color: #444345;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 6px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff6106;
+    box-shadow: 0 0 20px rgba(255, 97, 6, 0.5);
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.opciones a {
+    color: #ff6106;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6106;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #e55b05;
+    transform: scale(1.05);
+}
+
+.registro {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.registro a {
+    color: #ff6106;
+    text-decoration: none;
+}

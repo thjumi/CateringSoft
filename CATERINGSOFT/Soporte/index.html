@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Soporte</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="contenedor">
+                <p class="logo">CateringSoft</p>
+                <nav>
+                    <ul class="lista-menu">
+                        <li><a href="/CATERINGSOFT/home/index.html">Inicio</a></li>
+                        <li><a href="/CATERINGSOFT/Nosotros/index.html">Sobre Nosotros</a></li>
+                        <li><a href="/CATERINGSOFT/inicio-sesion/index.html">Iniciar sesión</a></li>
+                        <li><a href="/CATERINGSOFT/Registro/index.htm">Registro</a></li>
+                        <li><a href="/CATERINGSOFT/Servicios/index.html">Servicios</a></li>
+                        <li><a href="/CATERINGSOFT/Soporte/index.html">Soporte y contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="contenedor" id="contenedor-titulo-flex">
+            <div class="contenedor-titulo">
+                <h1>Soporte y contacto</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor" id="contenido">
+        <section id="formulario">
+            <h1>¡Envíanos un mensaje!</h1>
+            <form method="post">
+                <div class="form-group">
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" id="username" placeholder="Escribe tu nombre de usuario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Número de teléfono</label>
+                    <input type="text" id="phone" placeholder="Escribe tu número de teléfono" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="Escribe tu correo electrónico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje aquí" required></textarea>
+                </div>
+                <button type="submit" class="button">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <section id="mapa">
+            <h2>Ubicación</h2>
+            <img src="/CATERINGSOFT/imagenes/soporte/mapa.jpg" alt="Mapa de ubicación" class="mapa-imagen">
+        </section>
+    </div>
+    <section id="informacion-contacto">
+        <h2>¿Prefieres contactarnos directamente?</h2>
+        <p><strong>Teléfono:</strong> +57 123 456 789</p>
+        <p><strong>Email:</strong> contacto@CateringSoft.com</p>
+        <p><strong>Dirección:</strong> avenida siempre viva 123</p>
+    </section>
+    <a href="https://wa.me/573058553638" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Chatea con nosotros
+    </a>
+</body>
+</html>
