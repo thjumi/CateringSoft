@@ -11,7 +11,6 @@ header {
     background-size: cover;
     background-position: center;
 }
-
 .boton-flotante {
     margin: 10px;
     position: fixed;
@@ -31,7 +30,6 @@ header {
     background-color: #096304a8;
     transform: scale(1.1);
 }
-
 .contenedor {
     max-width: 1280px;
     width: 90%;
@@ -184,7 +182,7 @@ header {
 
 /* Preguntas frecuentes */
 #faq {
-    background: linear-gradient(100deg, #0000008c, #000000cf), url(../imagenes/home/3.jpg);
+    background: linear-gradient(100deg, #0000008c, #000000cf),  url(../imagenes/home/3.jpg);
     background-size: cover;
     padding: 50px 0;
 }
@@ -234,8 +232,7 @@ header {
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
-/* Foster */
+/* foster */
 footer {
     margin-top: 30px;
     display: flex;
@@ -315,93 +312,4 @@ footer {
 .banner-image img {
     max-width: 100%;
     height: auto;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header {
-        height: 70vh;
-        background-position: top;
-    }
-
-    .contenedor {
-        width: 95%;
-    }
-
-    .menu .contenedor {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .lista-menu {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .lista-menu li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    #contenedor-titulo-flex {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .contenedor-titulo h1 {
-        font-size: 50px;
-    }
-
-    .contenedor-titulo h2 {
-        font-size: 20px;
-    }
-
-    .contenedor-tarjetas {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    .banner {
-        flex-direction: column;
-        width: 90%;
-        padding: 20px;
-    }
-
-    .banner-text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .banner-image {
-        max-width: 80%;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .boton-flotante {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
-
-    .banner-text h1 {
-        font-size: 2em;
-    }
-
-    .banner-text p {
-        font-size: 1em;
-    }
-
-    .faq-lista {
-        padding: 0 10px;
-    }
-
-    footer {
-        font-size: 16px;
-    }
 }
