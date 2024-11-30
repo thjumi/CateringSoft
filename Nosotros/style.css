@@ -12,7 +12,7 @@ header {
     background-position: center;
 }
 
-/* Menu */
+/* Menú */
 .menu .contenedor {
     display: flex;
     justify-content: space-between;
@@ -21,6 +21,7 @@ header {
 
 .lista-menu {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .lista-menu li {
@@ -30,7 +31,7 @@ header {
 
 .lista-menu li a {
     color: #ffffff;
-    padding: 14px 24px;
+    padding: 10px 15px;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
 }
@@ -62,12 +63,13 @@ header {
 
 .contenedor-titulo h1 {
     color: #ffffff;
-    font-size: 80px;
+    font-size: 60px;
     margin: 0;
+    text-align: center;
 }
 
 .contenedor-titulo h2 {
-    font-size: 30px;
+    font-size: 20px;
     color: #ffffff;
     margin: 0;
 }
@@ -80,7 +82,7 @@ header {
 }
 
 .contenedorH h1 {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 600;
     color: #ff5500;
     margin-bottom: 20px;
@@ -88,6 +90,7 @@ header {
 
 .contenido-historia {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 }
@@ -102,11 +105,11 @@ header {
 }
 
 .contenedor-img {
-    max-width: 500px;
+    max-width: 400px;
     flex-shrink: 0;
     width: 100%;
     overflow: hidden;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
 }
 
 .contenedor-img img {
@@ -114,9 +117,6 @@ header {
     height: auto;
     object-fit: cover;
     border-radius: 8px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
 }
 
 /* Sección ¿Por qué nosotros? */
@@ -135,13 +135,12 @@ header {
 }
 
 #porque-nosotros h1 {
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 600;
     color: #ff6106;
     margin-bottom: 20px;
     text-align: center;
 }
-
 
 .texto-historia p {
     margin-bottom: 15px;
@@ -151,21 +150,22 @@ header {
 
 /* Tarjetas */
 #tarjetas {
-    margin: 60px 0;
+    margin: 40px 0;
 }
 
 .contenedor-tarjetas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Reduce la separación entre tarjetas */
+    gap: 15px;
 }
 
 .card {
     background-color: #f1ededc9;
     border: 2px solid #333;
-    width: 250px; /* Reduce el ancho de la tarjeta */
-    padding: 10px; /* Añade un poco de padding para darle espacio interno */
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
@@ -176,13 +176,68 @@ header {
 }
 
 .card h2 {
-    font-size: 18px; /* Reduce el tamaño del texto del título */
+    font-size: 18px;
     color: #333;
     margin: 10px 0;
 }
 
 .card p {
-    font-size: 14px; /* Reduce el tamaño del texto del párrafo */
+    font-size: 14px;
     color: #000000;
     margin: 0 10px 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .contenido-historia {
+        flex-direction: column;
+    }
+
+    #Quienes-somos, #porque-nosotros {
+        padding: 20px;
+    }
+
+    .contenedorH h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorH h1 {
+        font-size: 24px;
+    }
+
+    .texto-historia {
+        font-size: 16px;
+    }
+
+    .card {
+        max-width: 250px;
+    }
+
+    .contenedor-titulo h1 {
+        font-size: 45px;
+    }
+
+    .contenedor-titulo h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-titulo h1 {
+        font-size: 35px;
+    }
+
+    .contenedor-titulo h2 {
+        font-size: 16px;
+    }
+
+    #porque-nosotros h1 {
+        font-size: 22px;
+    }
+
+    .card {
+        max-width: 200px;
+    }
 }
