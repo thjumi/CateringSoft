@@ -6,13 +6,13 @@ body {
 }
 
 header {
-    background: linear-gradient(#000000ad, rgba(0, 0, 0, 0.313)), url(../imagenes/nosotros/encabezado.jpg);
+    background: linear-gradient(#000000ad, #00000093), url(../imagenes/nosotros/encabezado.jpg);
     height: 50vh;
     background-size: cover;
     background-position: center;
 }
 
-/* Menú */
+/* Menu */
 .menu .contenedor {
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,6 @@ header {
 
 .lista-menu {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .lista-menu li {
@@ -31,7 +30,7 @@ header {
 
 .lista-menu li a {
     color: #ffffff;
-    padding: 10px 15px;
+    padding: 14px 24px;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
 }
@@ -63,13 +62,12 @@ header {
 
 .contenedor-titulo h1 {
     color: #ffffff;
-    font-size: 60px;
+    font-size: 80px;
     margin: 0;
-    text-align: center;
 }
 
 .contenedor-titulo h2 {
-    font-size: 20px;
+    font-size: 30px;
     color: #ffffff;
     margin: 0;
 }
@@ -82,17 +80,18 @@ header {
 }
 
 .contenedorH h1 {
-    font-size: 35px;
+    font-size: 45px;
     font-weight: 600;
     color: #ff5500;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .contenido-historia {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* Asegura que los elementos se acomoden bien en pantallas pequeñas */
 }
 
 .texto-historia {
@@ -102,14 +101,16 @@ header {
     text-align: justify;
     padding: 20px;
     line-height: 1.6;
+    order: 1; /* Garantiza que el texto vaya primero */
 }
 
 .contenedor-img {
-    max-width: 400px;
+    max-width: 500px;
     flex-shrink: 0;
     width: 100%;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
+    order: 2; /* Hace que la imagen vaya después del texto */
 }
 
 .contenedor-img img {
@@ -117,6 +118,9 @@ header {
     height: auto;
     object-fit: cover;
     border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Sección ¿Por qué nosotros? */
@@ -135,7 +139,7 @@ header {
 }
 
 #porque-nosotros h1 {
-    font-size: 30px;
+    font-size: 45px;
     font-weight: 600;
     color: #ff6106;
     margin-bottom: 20px;
@@ -150,24 +154,23 @@ header {
 
 /* Tarjetas */
 #tarjetas {
-    margin: 40px 0;
+    margin: 60px 0;
 }
 
 .contenedor-tarjetas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Reduce la separación entre tarjetas */
 }
 
 .card {
     background-color: #f1ededc9;
     border: 2px solid #333;
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
+    width: 200px; /* Reduce el ancho de la tarjeta */
+    padding: 10px; /* Añade un poco de padding para darle espacio interno */
     border-radius: 8px;
-    text-align: center;
+    text-align: justify;
     transition: transform 0.3s;
 }
 
@@ -176,68 +179,111 @@ header {
 }
 
 .card h2 {
-    font-size: 18px;
+    font-size: 18px; /* Reduce el tamaño del texto del título */
     color: #333;
     margin: 10px 0;
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 14px; /* Reduce el tamaño del texto del párrafo */
     color: #000000;
     margin: 0 10px 10px;
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-    .contenido-historia {
-        flex-direction: column;
-    }
-
-    #Quienes-somos, #porque-nosotros {
-        padding: 20px;
-    }
-
-    .contenedorH h1 {
-        font-size: 28px;
-    }
+/* Menu Mobile (Hamburger) */
+.hamburger {
+    align-items: center;
+    display: block;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Ajusta la posición para que quede a la izquierda */
 }
 
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #ff5900;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .contenedorH h1 {
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        padding: 10px 0;
+    }
+
+    .lista-menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu.active .lista-menu {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    #contenedor-titulo-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #contenedor-titulo-flex h1 {
+        font-size: 50px;
+    }
+
+    #contenedor-titulo-flex h2 {
         font-size: 24px;
     }
 
+    /* Ajustes de "Quienes Somos" */
+    .contenedorH h1 {
+        font-size: 30px; 
+    }
+    .contenido-historia {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 20px;
+    }
+
     .texto-historia {
-        font-size: 16px;
+        font-size: 16px; 
+        padding: 10px;
     }
 
-    .card {
-        max-width: 250px;
+    .contenedor-img {
+        max-width: 100%;
     }
 
-    .contenedor-titulo h1 {
-        font-size: 45px;
-    }
-
-    .contenedor-titulo h2 {
-        font-size: 18px;
+    #Quienes-somos {
+        padding: 20px;
     }
 }
 
+
 @media (max-width: 480px) {
-    .contenedor-titulo h1 {
-        font-size: 35px;
-    }
-
-    .contenedor-titulo h2 {
-        font-size: 16px;
-    }
-
-    #porque-nosotros h1 {
-        font-size: 22px;
-    }
-
     .card {
-        max-width: 200px;
+        width: 200px;
+        padding: 15px;
+    }
+
+    .contenedor-tarjetas {
+        gap: 10px;
     }
 }
