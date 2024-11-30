@@ -336,7 +336,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     header {
-        height: 80vh;
+        height: 70vh;
     }
 
     .contenedor-titulo h1 {
