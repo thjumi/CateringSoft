@@ -1,3 +1,4 @@
+/* General */
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
@@ -15,20 +16,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 
 .lista-menu {
     display: flex;
+    gap: 15px;
 }
 
 .lista-menu li {
     list-style: none;
-    margin-right: 15px;
 }
 
 .lista-menu li a {
     color: #ffffff;
-    padding: 14px 24px;
+    padding: 10px 20px;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
 }
@@ -59,9 +61,10 @@ header {
 
 .contenedor-titulo h1 {
     color: #ffffff;
-    font-size: 80px;
+    font-size: 60px;
     margin: 0;
     display: flex;
+    text-align: center;
 }
 
 /* Estilos para el contenido */
@@ -75,21 +78,21 @@ header {
     flex-wrap: wrap;
 }
 
-/* Estilos para el formulario y el mapa */
 #formulario, #mapa {
     padding: 20px;
     border-radius: 10px;
     background-color: #e9e3df;
     text-align: center;
     flex: 1;
-    max-width: 50%; 
+    max-width: 45%; /* Ajuste para pantallas grandes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     margin: 10px 0;
     font-size: 16px;
     border: 1px solid #674747;
@@ -98,11 +101,12 @@ textarea {
 
 button[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #114d09dc;
     color: #ffffff;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -118,13 +122,14 @@ textarea {
 }
 
 .mapa-imagen {
-    width: 60%;
+    width: 100%; /* Ajuste para asegurar responsividad */
     height: auto;
     border-radius: 8px;
 }
+
 #informacion-contacto {
-    background-color: #f9f9f9; 
-    padding: 30px; 
+    background-color: #f9f9f9;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -133,15 +138,15 @@ textarea {
 }
 
 #informacion-contacto h2 {
-    font-size: 24px; 
-    color: #333; 
-    margin-bottom: 20px; 
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 #informacion-contacto p {
-    font-size: 18px; 
-    color: #555; 
-    margin: 10px 0; 
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
 }
 
 #informacion-contacto strong {
@@ -156,7 +161,7 @@ textarea {
     background-color: #25D366;
     color: white;
     padding: 15px;
-    border-radius: 5%;
+    border-radius: 50%;
     font-size: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
@@ -165,4 +170,56 @@ textarea {
 .whatsapp-btn:hover {
     text-decoration: none;
     background-color: #128C7E;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        height: 30vh;
+    }
+
+    .contenedor-titulo h1 {
+        font-size: 40px;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #contenido {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #formulario, #mapa {
+        max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+
+    #informacion-contacto h2 {
+        font-size: 20px;
+    }
+
+    #informacion-contacto p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 25vh;
+    }
+
+    .contenedor-titulo h1 {
+        font-size: 30px;
+    }
+
+    .whatsapp-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
 }
