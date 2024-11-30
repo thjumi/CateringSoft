@@ -11,6 +11,7 @@ header {
     background-size: cover;
     background-position: center;
 }
+
 .boton-flotante {
     margin: 10px;
     position: fixed;
@@ -256,7 +257,7 @@ footer {
     max-width: 1200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     gap: 10px;
-    background: linear-gradient(to right, #000000, #072200, #0f9b0f);
+    background: linear-gradient(to right, #000000, #072200, #025202);
 }
 
 .banner-content {
@@ -312,4 +313,152 @@ footer {
 .banner-image img {
     max-width: 100%;
     height: auto;
+}
+/* Estilo del menú */
+.hamburger {
+    align-items: center;
+    display: block;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Ajusta la posición para que quede a la izquierda */
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #ff5900c9;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        height: 80vh;
+    }
+
+    .contenedor-titulo h1 {
+        font-size: 50px;
+    }
+
+    .contenedor-titulo h2 {
+        font-size: 22px;
+    }
+
+    .contenedor-tarjetas {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%; /* Reduce el tamaño para ajustarse a pantallas más pequeñas */
+    }
+
+    .menu .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .banner-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .banner-image {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    header {
+        height: 100vh;
+    }
+
+    .contenedor-titulo h1 {
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+
+    .contenedor-titulo h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .menu .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lista-menu li {
+        margin: 5px 0;
+    }
+
+    .banner {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .banner-text h1 {
+        font-size: 1.5em;
+    }
+
+    .banner-text p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        align-items: center;
+        display: flex;
+        top: 20px;
+        left: 20px; 
+        position: absolute;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #000;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 100;
+    }
+
+    #nav-menu.active {
+        left:20px;
+        display: flex;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+    }
+
+    .lista-menu li {
+        margin: 10px 0;
+    }
+
+    .lista-menu a {
+        color: #000;
+        text-decoration: none;
+    }
 }
