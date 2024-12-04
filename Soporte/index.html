@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Soporte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="menu">
             <div class="contenedor">
                 <p class="logo">CateringSoft</p>
-                <nav>
+                <div class="hamburguesa" id="hamburguesa">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav id="nav-menu">
                     <ul class="lista-menu">
                         <li><a href="../home/index.html">Inicio</a></li>
                         <li><a href="../Nosotros/index.html">Sobre Nosotros</a></li>
                         <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
-                        <li><a href="../Registro/index.htm">Registro</a></li>
+                        <li><a href="../Registro/index.html">Registro</a></li>
                         <li><a href="../Servicios/index.html">Servicios</a></li>
                         <li><a href="../Soporte/index.html">Soporte y contacto</a></li>
                     </ul>
@@ -31,46 +35,59 @@
         </div>
     </header>
 
-    <div class="contenedor" id="contenido">
-        <section id="formulario">
+    <div class="contenedor tarjetas">
+        <section id="formulario" class="tarjeta">
             <h1>¡Envíanos un mensaje!</h1>
             <form method="post">
                 <div class="form-group">
                     <label for="username">Nombre de usuario</label>
-                    <input type="text" id="username" placeholder="Escribe tu nombre de usuario" required>
+                    <input type="text" id="username" required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Número de teléfono</label>
-                    <input type="text" id="phone" placeholder="Escribe tu número de teléfono" required>
+                    <input type="text" id="phone" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" placeholder="Escribe tu correo electrónico" required>
+                    <input type="email" id="email" required>
                 </div>
 
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje aquí" required></textarea>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
                 </div>
                 <button type="submit" class="button">Enviar mensaje</button>
             </form>
         </section>
 
-        <section id="mapa">
+        <section id="mapa" class="tarjeta">
             <h2>Ubicación</h2>
             <img src="../imagenes/soporte/mapa.jpg" alt="Mapa de ubicación" class="mapa-imagen">
         </section>
     </div>
+
     <section id="informacion-contacto">
         <h2>¿Prefieres contactarnos directamente?</h2>
-        <p><strong>Teléfono:</strong> +57 123 456 789</p>
-        <p><strong>Email:</strong> contacto@CateringSoft.com</p>
-        <p><strong>Dirección:</strong> avenida siempre viva 123</p>
+        <div class="info-contacto">
+            <p><strong>Teléfono:</strong> +57 123 456 789</p>
+            <p><strong>Email:</strong> contacto@CateringSoft.com</p>
+            <p><strong>Dirección:</strong> Avenida Siempre Viva 123</p>
+        </div>
     </section>
+
     <a href="https://wa.me/573058553638" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i> Chatea con nosotros
+        <i class="fab fa-whatsapp"></i> 
     </a>
+
+    <script>
+        const hamburguesa = document.getElementById('hamburguesa');
+        const menu = document.getElementById('nav-menu');
+
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
