@@ -1,36 +1,45 @@
-/* General */
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
     background-color: rgb(251, 244, 234);
 }
 
+/* General */
 header {
     background: linear-gradient(#000000c3, rgba(0, 0, 0, 0.445)), url(../imagenes/home/1.jpg);
     height: 40vh;
     background-size: cover;
     background-position: center;
 }
-
+.contenedor p{
+    font-size: 20px;
+    margin:10px;
+}
+.contenedor-titulo h1{
+    text-align: center;
+    color:white;
+    font-size: 60px;
+    margin: 10px;
+}
 .menu .contenedor {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    align-items: center
 }
 
 .lista-menu {
     display: flex;
-    gap: 15px;
+    list-style: none;
+    padding: 0;
 }
 
 .lista-menu li {
-    list-style: none;
+    margin-right: 15px;
 }
 
 .lista-menu li a {
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 14px 24px;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
 }
@@ -45,181 +54,147 @@ header {
     font-weight: 700;
 }
 
-.contenedor {
-    max-width: 1280px;
-    width: 90%;
-    margin: auto;
-    text-align: center;
-}
-
-#contenedor-titulo-flex {
-    display: flex;
-    justify-content: left;
+/* Ocultar hamburguesa en escritorio */
+.hamburguesa {
     align-items: center;
-    height: 100%;
+    display: block;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-.contenedor-titulo h1 {
-    color: #ffffff;
-    font-size: 60px;
-    margin: 0;
+/* Tarjetas */
+.tarjetas {
     display: flex;
-    text-align: center;
-}
-
-/* Estilos para el contenido */
-#contenido {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px auto;
-    max-width: 1280px;
-    width: 90%;
     gap: 20px;
-    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
 }
 
-#formulario, #mapa {
+.tarjeta {
+    background: white;
     padding: 20px;
     border-radius: 10px;
-    background-color: #e9e3df;
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     flex: 1;
-    max-width: 45%; /* Ajuste para pantallas grandes */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+/* Formulario */
+#formulario .form-group {
+    margin-bottom: 15px;
+}
+
+#formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#formulario input, 
+#formulario textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    border: 1px solid #674747;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #114d09dc;
-    color: #ffffff;
+.button {
+    background-color: #fd8f00;
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 10px 20px;
     cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #069515db;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 150px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    transition: background-color 0.3s;
 }
 
+.button:hover {
+    background-color: #ff5e00;
+}
+
+/* Imagen del mapa */
 .mapa-imagen {
-    width: 100%; /* Ajuste para asegurar responsividad */
-    height: auto;
-    border-radius: 8px;
+    max-width: 150%;
+    border-radius: 5px;
 }
 
+/* Estilo del botón flotante de WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fd8f00;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+/* Información de contacto */
 #informacion-contacto {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
+    background-color: #ecd59c;
+    padding: 20px;
     text-align: center;
 }
 
 #informacion-contacto h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-#informacion-contacto p {
-    font-size: 18px;
-    color: #555;
-    margin: 10px 0;
+.info-contacto p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #000;
 }
 
-#informacion-contacto strong {
-    color: #ff4000;
-}
-
-.whatsapp-btn {
-    text-decoration: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    text-decoration: none;
-    background-color: #128C7E;
-}
-
-/* Responsive Adjustments */
+/* Media Queries */
 @media (max-width: 768px) {
-    header {
-        height: 30vh;
-    }
-
-    .contenedor-titulo h1 {
-        font-size: 40px;
+    .hamburguesa {
+        display: flex;
+        cursor: pointer;
+        font-size: 30px;
+        color: rgb(88, 160, 82);
     }
 
     .lista-menu {
+        color:black;
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        background-color: #000000;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
     }
 
-    #contenido {
+    #nav-menu.active .lista-menu {
+        display: flex;
+    }
+
+    .lista-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .tarjetas {
         flex-direction: column;
-        gap: 20px;
-    }
-
-    #formulario, #mapa {
-        max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    }
-
-    button[type="submit"] {
-        font-size: 14px;
-    }
-
-    #informacion-contacto h2 {
-        font-size: 20px;
-    }
-
-    #informacion-contacto p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        height: 25vh;
-    }
-
-    .contenedor-titulo h1 {
-        font-size: 30px;
-    }
-
-    .whatsapp-btn {
-        font-size: 13px;
-        padding: 10px;
     }
 }
