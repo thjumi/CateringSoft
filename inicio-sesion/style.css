@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(100deg, #000000cf, rgba(0, 0, 0, 0.724)), url(../imagenes/iniciosesion/inicios.jpg)  ;
+    background: linear-gradient(100deg, #000000cf, rgba(0, 0, 0, 0.724)), url(../imagenes/iniciosesion/inicios.jpg);
     background-size: cover;
     margin: 0;
     font-family: 'Playfair Display', serif;
@@ -51,24 +51,52 @@ header {
     color: #5bff29;
 }
 
-/* Contenedor Título */
-#contenedor-titulo-flex {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 100%;
+/* Hamburger menu */
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-.contenedor-titulo h1 {
-    color: #ffffff;
-    font-size: 80px;
-    margin: 0;
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
 }
 
-.contenedor-titulo h2 {
-    font-size: 30px;
-    color: #ffffff;
-    margin: 0;
+@media screen and (max-width: 768px) {
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        position: absolute;
+        top: 60px;
+        left: 5px;
+        background-color: #000000;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .lista-menu.activo {
+        display: flex;
+    }
+
+    .hamburguesa {
+        display: flex;
+    }
+
+    .lista-menu li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .lista-menu li a {
+        padding: 10px;
+    }
 }
 
 /* Formulario */
@@ -142,6 +170,7 @@ input[type="submit"]:hover {
     color: #ff6106;
     text-decoration: none;
 }
+
 #informacion-contacto p {
     font-size: 18px;
     line-height: 1.6;
