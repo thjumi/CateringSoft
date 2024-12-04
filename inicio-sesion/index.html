@@ -21,6 +21,11 @@
                         <li><a href="../Servicios/index.html">Servicios</a></li>
                         <li><a href="../Soporte/index.html">Soporte y contacto</a></li>
                     </ul>
+                    <div class="hamburguesa" onclick="toggleMenu()">
+                        <span class="linea"></span>
+                        <span class="linea"></span>
+                        <span class="linea"></span>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -38,15 +43,20 @@
             </div>
 
             <div class="registro">
-                <p>¿No tienes cuenta? <a href="../Registro/index.htm">Regístrate</a></p>
+                <p>¿No tienes cuenta? <a href="/Registro/index.htm">Regístrate</a></p>
             </div>
         </form>
     </div>
 
     <script>
         function redirigirDashboard(event) {
-            event.preventDefault(); // Evita el envío predeterminado del formulario
-            window.location.href = "../Dashboard/index.html"; // Redirige al dashboard
+            event.preventDefault(); 
+            window.location.href = "../Dashboard/index.html";
+        }
+
+        function toggleMenu() {
+            const menu = document.querySelector(".lista-menu");
+            menu.classList.toggle("activo");
         }
     </script>
 </body>
