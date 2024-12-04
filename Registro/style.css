@@ -52,6 +52,44 @@ header {
     color: #11ff00;
 }
 
+/* Menu hamburguesa */
+.menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguesa .barra {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #fff;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        position: absolute;
+        top: 60px;
+        left: 5px;
+        background-color: #000000;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .lista-menu.active {
+        display: flex;
+    }
+
+    .menu-hamburguesa {
+        display: flex;
+    }
+}
+
 /* Contenedor Título */
 #contenedor-titulo-flex {
     display: flex;
