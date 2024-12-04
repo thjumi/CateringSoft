@@ -21,6 +21,11 @@
                         <li><a href="../Servicios/index.html">Servicios</a></li>
                         <li><a href="../Soporte/index.html">Soporte y contacto</a></li>
                     </ul>
+                    <div class="menu-hamburguesa" onclick="toggleMenu()">
+                        <div class="barra"></div>
+                        <div class="barra"></div>
+                        <div class="barra"></div>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -38,5 +43,12 @@
             </div>
         </form>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.lista-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
